@@ -6,29 +6,41 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // Array of experience objects containing job details
 const experiences = [
   {
-    role: "Web Developer",
-    company: "Brain Mentors",
-    duration: "2022",
-    description:
-      "Worked with team to build high-performance apps, integrated AI features, and improved engagement by 10%.",
+    role: "Frontend Developer Intern",
+    company: "Edgeworks Software LTD",
+    duration: "Mar 2021 – Jul 2021",
+    description: (
+      <ul className="list-disc pl-5 space-y-2">
+        <li>
+          Developed responsive UI for Malis3 resource management system (NextJS, ReactJS).
+        </li>
+        <li>
+          Optimized frontend performance and seamless API integrations.
+        </li>
+      </ul>
+    ),
   },
-  
   {
-    role: "Web Developer Intern",
-    company: "Mobisoft Technologies",
-    duration: "2022 - 2023",
-    description:
-      "In this internship , I gained valuable hands on experience and exposure to various aspects of web development.",
+    role: "Full Stack Developer",
+    company: "YouNet Media",
+    duration: "Aug 2021 – Present",
+    description: (
+      <ul className="list-disc pl-5 space-y-2">
+        <li>
+          Built real-time Social Analytics Platforms (SocialHeat & Ecomheat).
+        </li>
+        <li>
+          Engineered high-availability Crisis Alert system (SocketIO, Redis, RabbitMQ).
+        </li>
+        <li>
+          Designed scalable MySQL/MongoDB architectures for high-volume data.
+        </li>
+        <li>
+          Optimized search using Apache Solr with custom Vietnamese tokenizers.
+        </li>
+      </ul>
+    ),
   },
-{
-    role: "Graduate Engineer",
-    company: "HCL Technologies",
-    duration: "2024 - 2025",
-    description:
-      "Built the frontend of a GenAI-powered PV Intake Application using Next.js and TypeScript for a U.S life sciences client, enabling automated patient report processing across global regions.",
-  },
-
-
 ];
 
 // Reusable component to render each experience item with animations
@@ -69,7 +81,7 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
         >
           <h3 className="text-xl font-semibold">{exp.role}</h3>
           <p className="text-md text-gray-400 mb-3">{exp.company} | {exp.duration}</p>
-          <p className="text-md text-gray-300 break-words">{exp.description}</p>
+          <div className="text-md text-gray-300 break-words">{exp.description}</div>
         </motion.article>
       </div>
     );
@@ -91,7 +103,7 @@ function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
       >
         <h3 className="text-lg font-semibold break-words">{exp.role}</h3>
         <p className="text-sm text-gray-400 mb-2 break-words">{exp.company} | {exp.duration}</p>
-        <p className="text-sm text-gray-300 break-words">{exp.description}</p>
+        <div className="text-sm text-gray-300 break-words">{exp.description}</div>
       </motion.article>
     </div>
   );

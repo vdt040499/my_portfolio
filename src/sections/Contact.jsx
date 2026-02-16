@@ -75,7 +75,7 @@ export default function Contact() {
       );
 
       setStatus("success");
-      setFormData({name: "",email: "",service: "",budget: "",idea: ""});
+      setFormData({ name: "", email: "", service: "", budget: "", idea: "" });
     } catch (err) {
       console.error("EmailJS Error:", err);
       setStatus("error");
@@ -88,7 +88,7 @@ export default function Contact() {
       {/* Particles Background */}
       <ParticlesBackground />
 
-  
+
 
       {/* Contact Section Content */}
       <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-10">
@@ -115,7 +115,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="w-full md:w-1/2 bg-white/5 p-8 rounded-2xl shadow-lg border border-white/10"
         >
-          <h2 className="text-3xl font-bold mb-6">Let’s Work Together</h2>
+          <h2 className="text-3xl font-bold mb-6">Let's Connect</h2>
 
           <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Name field */}
@@ -129,9 +129,8 @@ export default function Contact() {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`p-3 rounded-md bg-white/10 border ${
-                  errors.name ? "border-red-500" : "border-gray-500"
-                } text-white focus:outline-none focus:border-blue-500`}
+                className={`p-3 rounded-md bg-white/10 border ${errors.name ? "border-red-500" : "border-gray-500"
+                  } text-white focus:outline-none focus:border-[#e0c9a6]`}
               />
               {errors.name && (
                 <p className="text-red-500 text-xs">{errors.name}</p>
@@ -149,9 +148,8 @@ export default function Contact() {
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`p-3 rounded-md bg-white/10 border ${
-                  errors.email ? "border-red-500" : "border-gray-500"
-                } text-white focus:outline-none focus:border-blue-500`}
+                className={`p-3 rounded-md bg-white/10 border ${errors.email ? "border-red-500" : "border-gray-500"
+                  } text-white focus:outline-none focus:border-[#e0c9a6]`}
               />
               {errors.email && (
                 <p className="text-red-500 text-xs">{errors.email}</p>
@@ -159,7 +157,7 @@ export default function Contact() {
             </div>
 
             {/* Service dropdown */}
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <label className="mb-1">
                 Service Needed <span className="text-red-500">*</span>
               </label>
@@ -168,9 +166,8 @@ export default function Contact() {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className={`p-3 rounded-md bg-white/10 border ${
-                  errors.service ? "border-red-500" : "border-gray-500"
-                } focus:outline-none focus:border-blue-500`}
+                className={`p-3 rounded-md bg-white/10 border ${errors.service ? "border-red-500" : "border-gray-500"
+                  } focus:outline-none focus:border-[#e0c9a6]`}
               >
                 <option value="" disabled>
                   Something in mind?
@@ -189,9 +186,9 @@ export default function Contact() {
               {errors.service && (
                 <p className="text-red-500 text-xs">{errors.service}</p>
               )}
-            </div>
-
-            {/* Budget field */}
+            </div> */}
+            {/* 
+            Budget field
             {formData.service && formData.service !== "other" && (
               <div className="flex flex-col">
                 <label className="mb-1">
@@ -204,32 +201,30 @@ export default function Contact() {
                   placeholder="Your Budget"
                   value={formData.budget}
                   onChange={handleChange}
-                  className={`p-3 rounded-md bg-white/10 border ${
-                    errors.budget ? "border-red-500" : "border-gray-500"
-                  } text-white focus:outline-none focus:border-blue-500`}
+                  className={`p-3 rounded-md bg-white/10 border ${errors.budget ? "border-red-500" : "border-gray-500"
+                    } text-white focus:outline-none focus:border-[#e0c9a6]`}
                 />
 
                 {errors.budget && (
                   <p className="text-red-500 text-xs">{errors.budget}</p>
                 )}
               </div>
-            )}
+            )} */}
 
             {/* Idea textarea */}
             <div className="flex flex-col">
               <label className="mb-1">
-                Idea <span className="text-red-500">*</span>
+                Message <span className="text-red-500">*</span>
               </label>
 
               <textarea
-                name="idea"
+                name="message"
                 rows={5}
-                placeholder="Enter your idea"
-                value={formData.idea}
+                placeholder="Enter your message"
+                value={formData.message}
                 onChange={handleChange}
-                className={`p-3 rounded-md bg-white/10 border ${
-                  errors.idea ? "border-red-500" : "border-gray-500"
-                } text-white focus:outline-none focus:border-blue-500`}
+                className={`p-3 rounded-md bg-white/10 border ${errors.message ? "border-red-500" : "border-gray-500"
+                  } text-white focus:outline-none focus:border-[#e0c9a6]`}
               />
 
               {errors.idea && (
@@ -240,19 +235,18 @@ export default function Contact() {
             {/* Status message */}
             {status && (
               <p
-                className={`text-sm ${
-                  status === "success"
-                    ? "text-green-400"
-                    : status === "error"
+                className={`text-sm ${status === "success"
+                  ? "text-green-400"
+                  : status === "error"
                     ? "text-red-400"
                     : "text-yellow-400"
-                }`}
+                  }`}
               >
                 {status === "sending"
                   ? "Sending..."
                   : status === "success"
-                  ? "Message sent successfully ✅"
-                  : "Something went wrong ❌"}
+                    ? "Message sent successfully ✅"
+                    : "Something went wrong ❌"}
               </p>
             )}
 
@@ -263,8 +257,8 @@ export default function Contact() {
               disabled={status === "sending"}
               type="submit"
               className="
-                bg-blue-600 
-                hover:bg-blue-700 
+                bg-[#a67c52] 
+                hover:bg-[#8c6642] 
                 disabled:opacity-60 
                 text-white 
                 py-3 

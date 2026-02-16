@@ -2,11 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  FaYoutube,
-  FaXTwitter,
   FaLinkedinIn,
-  FaInstagram,
   FaGithub,
+  FaFacebook,
 } from "react-icons/fa6";
 
 /**
@@ -16,11 +14,9 @@ import {
  * - Add/remove items if you want more or fewer social platforms
  */
 const socials = [
-  { Icon: FaYoutube, label: "YouTube", href: "https://www.youtube.com/@gauravbitss" },
-  { Icon: FaXTwitter, label: "X", href: "https://x.com/gauravbuilds" },
-  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/gaurav-gupta-4179671b0/" },
-  { Icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/gauravbits/" },
-  { Icon: FaGithub, label: "GitHub", href: "https://github.com/gauravgupta364" },
+  { Icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/in/tan-vo-44b9a5202/" },
+  { Icon: FaFacebook, label: "Facebook", href: "https://www.facebook.com/vo.tan.1023611" },
+  { Icon: FaGithub, label: "GitHub", href: "https://github.com/vdt040499" },
 ];
 
 /**
@@ -46,9 +42,9 @@ const Footer = () => {
     <footer className="relative overflow-hidden bg-black">
       {/* --- Background neon gradient effects --- */}
       {/* Blue glow overlay (top-right side) */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_70%_35%,rgba(13,88,204,0.35),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_60%_at_70%_35%,rgba(166,124,82,0.35),transparent_70%)]" />
       {/* Green glow overlay (bottom-left side) */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_55%_at_30%_70%,rgba(16,185,129,0.30),transparent_70%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_55%_at_30%_70%,rgba(224,201,166,0.30),transparent_70%)]" />
 
       {/* --- Main Footer Content --- */}
       <motion.div
@@ -59,7 +55,7 @@ const Footer = () => {
       >
         {/* --- Personal Name / Branding --- */}
         {/* Change text to your name or brand */}
-        <div className="w-full">
+        {/* <div className="w-full">
           <h1
             className="font-bangers font-semibold leading-none text-white text-center select-none"
             style={{
@@ -72,13 +68,13 @@ const Footer = () => {
               textShadow: "0 2px 18px rgba(0,0,0,0.45)",
             }}
           >
-            Gaurav Gupta
+            Võ Duy Tân
           </h1>
-        </div>
+        </div> */}
 
         {/* --- Accent underline --- */}
         {/* Decorative gradient line under name */}
-        <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#0D58CC] via-cyan-300 to-emerald-400" />
+        <div className="h-[3px] w-24 md:w-32 rounded-full bg-gradient-to-r from-[#4a3b2a] via-[#a67c52] to-[#e0c9a6]" />
 
         {/* --- Social Media Links --- */}
         {/* Icons mapped dynamically from `socials` array */}
@@ -115,7 +111,7 @@ const Footer = () => {
         {/* --- Copyright / Trademark --- */}
         {/* Auto-updates year dynamically */}
         <p className="text-xs text-gray-400">
-          © {new Date().getFullYear()} Gaurav Gupta. All rights reserved.
+          © {new Date().getFullYear()} Vo Tan. All rights reserved.
         </p>
       </motion.div>
     </footer>

@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import OverlayMenu from "./OverlayMenu";
 import { FiMenu } from "react-icons/fi";
-import Logo from "../assets/Logo.png"; // Adjust path
+import Logo from "../assets/vt_logo.png"; // Adjust path
+import UITLogo from "../assets/uit_logo.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,15 +70,14 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-transform duration-300 ${
-          visible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 z-50 transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src={Logo} alt="Logo" className="w-8 h-8" />
-          <div className="text-2xl font-bold text-white hidden sm:block">
-            Gaurav
+        <div className="flex items-center space-x-1">
+          <img src={Logo} alt="Logo" className="w-10 h-10 -mt-1" />
+          <div className="text-2xl font-medium tracking-wide text-white hidden sm:block">
+            Vo Tan
           </div>
         </div>
 
@@ -94,12 +94,7 @@ export default function Navbar() {
 
         {/* Contact Button */}
         <div className="hidden lg:block">
-          <a
-            href="#contact"
-            className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300"
-          >
-            Reach Out
-          </a>
+          <img src={UITLogo} alt="Logo" className="w-70 h-15" />
         </div>
       </nav>
 

@@ -38,7 +38,7 @@ export default function CustomCursor() {
       {/* The glowing circle */}
       <div
         className="w-20 h-20 rounded-full 
-                   bg-gradient-to-r from-pink-500 to-blue-500 
+                   bg-gradient-to-r from-[#a67c52] to-[#4a3b2a] 
                    blur-3xl opacity-80"
       />
     </div>

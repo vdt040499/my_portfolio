@@ -175,8 +175,8 @@ const MusicPlayer = () => {
         onTouchStart={handleDoubleTapMobile}
         className="p-4 rounded-full shadow-lg transition transform hover:scale-110"
         style={{
-          background: "linear-gradient(135deg, #00f0ff, #00ff80)",
-          boxShadow: "0 0 15px #00f0ff, 0 0 25px #00ff80",
+          background: "linear-gradient(135deg, #e0c9a6, #a67c52)",
+          boxShadow: "0 0 15px #e0c9a6, 0 0 25px #a67c52",
           color: "white",
         }}
         aria-label={isPlaying ? "Pause music" : "Play music"}

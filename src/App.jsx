@@ -29,9 +29,9 @@ export default function App() {
 
       <About />
       <Skills />
-      <Projects />
+      {/* <Projects /> */}
       <Experience />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>
