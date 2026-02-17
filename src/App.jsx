@@ -29,7 +29,7 @@ export default function App() {
 
       <About />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <Experience />
       {/* <Testimonials /> */}
       <Contact />
