@@ -117,7 +117,7 @@ const Home = React.forwardRef((props, ref) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              Hello, I&apos;m
+              Hey, I&apos;m
               <br />
               <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
                 Võ Tân
@@ -126,13 +126,14 @@ const Home = React.forwardRef((props, ref) => {
 
             {/* description */}
             <motion.p
-              className="mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0"
+              className="mt-6 text-justify sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              I am a Fullstack Engineer.
-              I bridge the gap between robust software engineering and advanced AI, building intelligent systems that solve real-world problems.
+              But you can call me <span className="text-white font-bold text-xl">
+                "Muối"
+              </span> if you believe that making people laugh is one of my favorite things to do. I like making fun and interactive things with code. I also talk & write about those things.
             </motion.p>
 
             {/* buttons */}
@@ -230,7 +231,7 @@ const Home = React.forwardRef((props, ref) => {
             >
               <img
                 src={avatar}
-                alt="Gaurav Gupta avatar"
+                alt="Vo Tan avatar"
                 className="relative w-auto h-auto max-h-[90vh] lg:max-h-[650px] xl:max-h-[800px] object-contain drop-shadow-[0_0_25px_rgba(166,124,82,0.6)] mask-image-gradient"
                 style={{
                   maskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",

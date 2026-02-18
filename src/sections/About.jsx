@@ -49,8 +49,8 @@ export default function About() {
               Full Stack Developer
             </p>
 
-            <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              I am a Fullstack Engineer currently pursuing a Master&apos;s in Computer Science. My passion lies in leveraging deep software engineering knowledge with cutting-edge AI to build the next generation of intelligent applications. My toolkit spans React, Next.js, Node.js, TypeScript, and Python/AI frameworks—bringing ideas to life from concept to production.
+            <p className="mt-4 text-justify text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
+              I am a Fullstack Engineer currently pursuing a Master&apos;s in Computer Science. My passion lies in leveraging deep software engineering knowledge with cutting-edge AI to build the next generation of intelligent applications. I want to bridge the gap between robust software engineering and advanced AI, building intelligent systems that solve real-world problems. My toolkit spans React, Next.js, Node.js, TypeScript, and Python/AI frameworks—bringing ideas to life from concept to production.
             </p>
 
             {/* Quick stats */}
