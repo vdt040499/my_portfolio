@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
 // motion: for animating elements
 // useScroll: to track scroll position
 // AnimatePresence: to animate components when mounting/unmounting
@@ -9,9 +11,9 @@ import { motion, useScroll, AnimatePresence } from "framer-motion";
 // Importing project images (desktop & mobile versions)
 import img1 from "../assets/project1.jpg";
 import img2 from "../assets/project2.png";
-// import img3 from "../assets/img3.JPG";
+import img3 from "../assets/project3.png";
 // import photo1 from "../assets/photo1.jpg";
-// import photo2 from "../assets/photo2.PNG";
+// import photo2 from "../assets/photo2.png";
 // import photo3 from "../assets/photo3.png";
 
 const MH3 = motion.h3;
@@ -48,23 +50,26 @@ export default function Projects() {
   const projects = React.useMemo(
     () => [
       {
-        title: "Air Guard",
-        link: "https://air-guard.io.vn",
-        bgColor: "#0d4d3d",
-        image: isMobile ? img1 : img1, // Mobile vs desktop image
+        title: "Price Drop",
+        link: "https://asset-price-drop.vercel.app/",
+        github: "https://github.com/vdt040499/deal_drop",
+        bgColor: "#f4ad00",
+        image: isMobile ? img3 : img3,
       },
       {
         title: "App Fund",
         link: "https://www.appfund.io.vn",
-        bgColor: "#e98a0b",
-        image: isMobile ? photo2 : img2,
+        github: "https://github.com/vdt040499/ai_treasurer",
+        bgColor: "#4885ec",
+        image: isMobile ? img2 : img2,
       },
-      // {
-      //   title: "Hungry Tiger",
-      //   link: "https://www.eathungrytiger.com/",
-      //   bgColor: "#dc9317",
-      //   image: isMobile ? photo3 : img3,
-      // },
+      {
+        title: "Air Guard",
+        link: "https://air-guard.io.vn",
+        github: "https://github.com/Ivanhdz04/AirGuard",
+        bgColor: "#0d4d3d",
+        image: isMobile ? img1 : img1, // Mobile vs desktop image
+      }
     ],
     [isMobile]
     // Memoize to prevent recalculating unless screen size changes
@@ -179,19 +184,34 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* View Project Button */}
-        <div className={`absolute ${isMobile ? "bottom-20" : "bottom-10"}`}>
+        {/* View Project & GitHub Buttons */}
+        <div className={`absolute ${isMobile ? "bottom-20" : "bottom-10"} flex items-center gap-4`}>
           <a
             href={activeProject?.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg bg-white text-black hover:bg-gray-200 transition-all shadow-lg"
             aria-label={`View ${activeProject?.title}`}
           >
+            <CgWebsite className="text-xl" />
             View Project
           </a>
+
+          {activeProject?.github && (
+            <a
+              href={activeProject?.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg bg-black/80 text-white backdrop-blur-sm hover:bg-black transition-all border border-white/20 shadow-lg"
+              aria-label={`View ${activeProject?.title} on GitHub`}
+            >
+              <FaGithub className="text-xl" />
+              <span>Source Code</span>
+            </a>
+          )}
         </div>
       </div>
     </section>
   );
 }
+
